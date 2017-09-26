@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Unit 4 Example</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function testfunction() {
+                var myColor;
+                var myText;
+                myColor = document.getElementById("color1").value;
+                myText = document.example.exampleText.value;
+                alert(myColor);
+                alert(myText);
+            }
+        </script>
+        <form name="example" id="example" action="#" method="get"></form>
+        <p><input type="color" name="color1" id="color"></p>
+        <p><input type="text" name="exampleText" id="exampleText"></p>
+        <p><input type="button" name="go" id="go" value="Go!" onclick="testfunction();"></p>
+    </body>
+</html>
