@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>lab 04</title>
+    </head>
+    <body>
+        <script>
+            function FtoC(){
+               var F = document.getElementById("TemperatureInFarenheit").value;
+               F = parseFloat(F);
+               var C = ((F - 32) * (5/9));
+                
+                document.farenheitTemp.TemperatureInCelcius.value = C;
+                
+                document.farenheitTemp.TemperatureInCelcius.style.backgroundColor = "pink";
+                
+                document.farenheitTemp.TemperatureInFarenheit.style.backgroundColor = "white";
+            }
+            function CtoF(){
+                var C = document.getElementById("TemperatureInCelcius").value;
+                C = parseFloat(C);
+                var F = (C * (9/5)) + 32;
+                
+                document.farenheitTemp.TemperatureInFarenheit.value = F;
+                
+                document.farenheitTemp.TemperatureInFarenheit.style.backgroundColor = "pink";
+                
+                document.farenheitTemp.TemperatureInCelcius.style.backgroundColor = "white";
+            }
+        </script>
+        <h1>Temperature Converter</h1>
+        <form name="farenheitTemp" id="farenheitTemp" action="#" method="get">
+        <p>Temperature in Faharenheit: <br><input type="text" id="TemperatureInFarenheit" name="TemperatureInFarenheit"></p>
+        <p><input type="button" name="F2C" id="F2C" value="F to C" onclick="FtoC();"> 
+           <input type="button" name="C2F" id="C2F" value="C to F" onclick="CtoF();"></p>
+        <p>Temperature in Celcius: <br><input type="text" id="TemperatureInCelcius" name="TemperatureInCelcius"></p>
+        </form>
+    </body>
+</html>

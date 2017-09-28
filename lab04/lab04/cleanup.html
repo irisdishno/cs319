@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Lab 04</title>
+    <body>
+        <script>
+            function showValues(){
+             var fName;
+             var mInitial;
+             var lName;
+             //var fuName;
+                
+            fName = document.getElementById("firstName").value;
+            mInitial = document.getElementById("middleInitial").value;
+            lName = document.getElementById("lastName").value;
+            //fuName = document.getElementById("fullName").value;
+            //alert(fName);
+                
+            fName = fName.trim();
+            mInitial = mInitial.trim();
+            lName = lName.trim();
+            //fuName = fuName.trim();
+            //alert(fName);
+                
+            fName = fName.toUpperCase();
+            mInitial = mInitial.toUpperCase();
+            lName = lName.toUpperCase();
+            //fuName = fuName.toUpperCase();
+            //alert(fName);
+            
+            document.nameCleanup.fullName.value = fName + " " + mInitial + " " + lName;    
+            
+            }
+        </script>
+        <h1>Name cleanup</h1>
+        <form name="nameCleanup" id="nameCleanup" action="#" method="get">
+            <p>First Name: <br> <input type="text" id="firstName" name="firstName"></p>
+            <p>Middle Initial: <br> <input type="text" id="middleInitial" name="middleInitial"></p>
+            <p>Last Name: <br> <input type="text" id="lastName" name="lastName"></p>
+            <p><input type="button" name="CleanupName" id="CleanupName" value="Cleanup Name" onclick="showValues();"></p>
+            <p>Full Name: <br> <input type="text" id="fullName" name="fullName"></p>
+        </form>
+    </body>    
+    </head>
+</html>
