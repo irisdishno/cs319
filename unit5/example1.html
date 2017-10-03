@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 04</title>
+    </head>
+    <body>
+        <script>
+            function tellStory() {
+                var name;
+                var number;
+                var color;
+                var animal;
+                
+                name = document.getElementById("name").value;
+                //alert(name);
+                
+                number = document.getElementById("number").value;
+                //alert(number);
+                
+                color = document.madlib.color.value;
+                //alert(color);
+                
+                animal = document.getElementById("animal").value;
+                //alert(animal);
+                
+                name = name.trim();
+                number = number.trim();
+                color = color.trim();
+                animal = animal.trim();
+                
+                if (name == "") {
+                    alert("Please enter your name.");
+                    document.madlib.name.focus();
+                    return false;
+                } else if (number == ""){
+                    return false;
+                } else if (color == "")
+                    return false; 
+                } else if (animal == "")
+                    return false;
+                } else {
+                    return true;
+                }
+                    
+            }
+            
+        </script>
+        <form name="madlib" id="madlib" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return tellStory();">
+            <p>Name: <input type="text" id="name"></p>
+            <p>Number: <input type="text" id="number"></p>
+            <p>Color:</p>
+                <input type="radio" id="black" value="black" name="color">Black <br>
+                <input type="radio" id="brown" value="brown" name="color">Brown <br>
+                <input type="radio" id="orange" value="orange" name="color">Orange <br>
+                <input type="radio" id="green" value="green" name="color">Green <br>
+            <p>Animal(plural):</p>
+                <select name="animalType" id="animal">
+                    <option value=""></option>
+                    <option value="dog">dog</option>
+                    <option value="cat">cat</option>
+                    <option value="bird">bird</option>
+                    <option value="turtle">turtle</option>
+                    <option value="elephant">elephant</option>
+                </select>
+            <p><input type="submit" name="Tellstory" id="Tellstory" value="Tell Story!"></p>
+        </form>
+    </body>
+</html>

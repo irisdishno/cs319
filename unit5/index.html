@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8">
+        <title>Exercis05</title>
+    </head>
+    <body>
+        <script>
+            function submitNumber(){
+                var month;
+                
+                month = document.getElementById("monthNumber").value;
+                //alert(month);
+                
+                if (month == 1){
+                    alert("January");
+                } 
+                if (month == 2){
+                    alert("February");
+                }
+                if (month == 3){
+                    alert("March");
+                }
+                if (month == 4){
+                    alert("April");
+                }
+                if (month == 5){
+                    alert("May");
+                }
+                if (month == 6){
+                    alert("June");
+                }
+                if (month == 7){
+                    alert("July");
+                }
+                if (month == 8){
+                    alert("August");
+                }
+                if (month == 9){
+                    alert("September");
+                }
+                if (month == 10){
+                    alert("October");
+                }
+                if (month == 11){
+                    alert("November");
+                }
+                if (month == 12){
+                    alert("December");
+                } else if (month >12){ 
+                    alert("I don't think that number corresponds to a month.")
+                    return false;
+                }
+            }
+        </script>
+        <h1>Months</h1>
+        <form name="Months" id="Months" action="#" method="get" onsubmit="return submitNumber();">
+        <p>Month Number: <input type="text" id="monthNumber" value="" name="monthNumber"> </p>
+        <input type="submit" id="Submit" value="Submit" name="completedNumber">
+        </form>       
+    </body>
+</html>
