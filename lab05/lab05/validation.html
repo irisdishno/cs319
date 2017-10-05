@@ -1,0 +1,44 @@
+<!DOC TYPE html>
+<html lang="en">
+    <head>
+        <title>lab05</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function Validate(){
+                var fName;
+                var lName;
+                var email;
+                
+                
+                fName= document.getElementById("FirstName").value;
+                //alert(fName);
+                lName= document.getElementById("LastName").value;
+                //alert(lName);
+                email= document.getElementById("EmailAddress").value;
+                //alert(email);
+                
+                if (fName == ""){
+                    alert("Please fill in your first name");
+                    document.NameAndInfo.FirstName.focus();
+                    return false;
+                } else if (lName == ""){
+                    alert("Please fill in your last name");
+                    documnet.NameAndInfo.LastName.focus();
+                    return false;
+                } else if (email == ""){
+                    alert("Please fill in your email")
+                    return false;
+                }
+                    
+            }
+        </script>
+        <form method="get" name="NameAndInfo" action="#" onsubmit="return Validate();">
+        <p>First Name: <input type="text" name="FirstName" id="FirstName" value=""></p>
+        <p>Last Name: <input type="text" name="LastName" id="LastName"></p>
+        <p>Email Address: <input type="text" name="EmailAddress" id="EmailAddress"></p>      
+        <p><input type="submit" name="Submit"> </p>
+        </form>
+    </body>
+</html>
