@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 06</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function validate() {
+                 //alert("test");
+                var guess = document.getElementById("Number");
+                var answer = 7;
+                
+                if (guess.value.trim() == "") {
+                    alert("Please Enter a Number.");
+                guess.focus();
+                return false;
+                } else if (isNaN(guess.value.trim()) == true) {
+                    alert("Your number is invalid.");
+                    guess.select();
+                    return false;
+                } else if ((guess.value.trim() <1) || (guess.value.trim() >10)) {
+                    alert("Your number is invalid.");
+                    guess.select();
+                    return false;
+                } else if (guess.value.trim() >7) {
+                    alert("Guess a lower number.");
+                    guess.select();
+                    return false;
+                } else if (guess.value.trim() <7) {
+                    alert("Guess a higher number.");
+                    guess.select();
+                    return false;
+                } else if (guess.value.trim() ==7) {
+                    alert("You have guessed the correct number.");
+                    return true;
+                }
+                
+            }
+                       
+        </script>
+        <h1>Guess the Number</h1>
+        <form name="GuessTheNumber" id="GuessTheNumber" action="#" method="get" onsubmit="return validate();">
+        <p>Number: <input type="text" id="Number" name="Number"></p>
+        <p><input type="submit" name="submit"></p>
+        </form>
+    </body>
+</html>
