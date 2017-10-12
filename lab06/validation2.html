@@ -1,0 +1,66 @@
+<!DOC TYPE html>
+<html lang="en">
+    <head>
+        <title>lab05</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function Validate(){
+                var fName;
+                var lName;
+                var email;
+                var age;
+                
+                
+                fName= document.getElementById("FirstName").value;
+                //alert(fName);
+                lName= document.getElementById("LastName").value;
+                //alert(lName);
+                email= document.getElementById("EmailAddress").value;
+                //alert(email);
+                age= document.getElementById("YourAge").value;
+                
+                if (fName == ""){
+                    alert("Please fill in your first name");
+                    document.NameAndInfo.FirstName.focus();
+                    return false;
+                } else if (lName == ""){
+                    alert("Please fill in your last name");
+                    document.NameAndInfo.LastName.focus();
+                    return false;
+                } else if (email == ""){
+                    alert("Please fill in your email");
+                    document.NameAndInfo.EmailAddress.focus();
+                    return false;
+                } else if (email.endsWith("@uwec.edu") == false) {
+                    alert("Please fill in a University email.");
+                    document.NameAndInfo.EmailAddress.focus();
+                    return false;
+                } else if (age == ""){
+                    alert("Please add your age.");
+                    document.NameAndInfo.YourAge.focus();
+                    return false;
+                } else if (isNaN(age)== true){
+                    alert("This not a number.");
+                    document.NameAndInfo.YourAge.focus();
+                    return false;
+                } else if (age <18){
+                    alert("You must be 18 years old or older.")
+                    document.NameAndInfo.YourAge.focus();
+                    return false;
+                } else {
+                    return true;
+                }
+                    
+            }
+        </script>
+        <form method="get" name="NameAndInfo" action="#" onsubmit="return Validate();">
+        <p>First Name: <input type="text" name="FirstName" id="FirstName" value=""></p>
+        <p>Last Name: <input type="text" name="LastName" id="LastName"></p>
+        <p>Email Address: <input type="text" name="EmailAddress" id="EmailAddress"></p>      
+        <p>Age: <input type="text" name="YourAge" id="YourAge"></p>
+        <p><input type="submit" name="Submit"> </p>
+        </form>
+    </body>
+</html>
