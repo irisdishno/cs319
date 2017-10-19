@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Midterm Program 4</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function whichRadio(){
+                var flower1;
+                var flower2;
+                var flower3;
+                
+                flower1 = document.getElementById("daisy").checked;
+                flower2 = document.getElementById("orchid").checked;
+                flower3 = document.getElementById("peony").checked;
+                
+                if (document.getElementById("daisy").checked == true){
+                    alert("You've clicked on Daisy.");
+                    return false;
+                } else if (document.getElementById("orchid").checked == true){
+                    alert("You've clicked on Orchid.");
+                    return false;
+                } else if (document.getElementById("peony").checked == true){
+                    alert("You've clicked on Peony.");
+                    return false;
+                } 
+            }
+            
+        </script>
+        <form name="flowers" id="flowers" action="#" method="get">
+            <p><input type="radio" name="flowerType" id="daisy" value="daisy" checked> Daisy<br>
+            <input type="radio" name="flowerType" id="orchid" value="orchid"> Orchid<br>
+            <input type="radio" name="flowerType" id="peony" value="peony"> Peony</p>
+            <p><input type="button" name="checkRadio" id="checkRadio" value="Which Flower?" onclick="whichRadio();"></p>
+        </form>
+    </body>
+</html>
